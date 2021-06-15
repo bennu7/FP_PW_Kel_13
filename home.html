@@ -5,16 +5,95 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <script src="js/bootstrap.min.js"></script>
+    <!-- <script src="js/bootstrap.min.js"></script> -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
     <title>Welcome</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container bg-info text-white p-3 my-3">
+      <h1>What is Android</h1>
+      <p>
+        Android is open everyone , developers, designers and device makers. That
+        means more people can experiment, imagine and create things the world
+        has never seen
+      </p>
+      <div class="container bg-info text-white p-3 my-3">
+        <h1>What is Android</h1>
+        <p>
+          Android is open to everyone: <em>developers</em>, designers and device
+          makers. That means more people can experiment, imagine and create
+          things the world has never seen.
+        </p>
+        <div class="row">
+          <div class="col">
+            <input
+              class="form-control"
+              type="text"
+              placeholder="Input email"
+              id="email"
+            />
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-success mb-2" id="send">
+              Confirm identity
+            </button>
+          </div>
+        </div>
+      </div>
+      <button id="show" class="btn btn-dark">Learn More</button>
+      <div class="mt-4" id="more">
+        <img src="" height="200" />
+        <h3 class="mt-2">Live Capption</h3>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui autem
+          est fugiat adipisci provident porro perferendis neque enim accusamus,
+          iusto minus quas dignissimos inventore, rerum at! Modi molestiae hic
+          quod.
+        </p>
+      </div>
+    </div>
+    <script>
+      $("#send").click(function () {
+        var email = $("#email").val();
+        console.log(email);
+      });
+
+      $(document).ready(function () {
+        var h1 = $("h1");
+        var p = $("p");
+
+        console.log(h1.text());
+        console.log(h1.html());
+        // console.log(p.text());
+        console.log(p.html());
+      });
+
+      $(document).ready(function () {
+        $("#more").hide();
+        $("#show").click(function () {
+          $("#more").slideDown();
+        });
+      });
+    </script>
+    <!-- <div class="container">
       <div class="jumbotron">
         <h3>Welcome to Lombok Island</h3>
       </div>
     </div>
-    <!--       
+    <div class="container">
+      <div class="row">
+        <div class="col-sm text-left font-weight-lighter text-uppercase">
+          One of three columns
+        </div>
+        <div class="col-sm text-center">One of three columns</div>
+        <div class="col-sm text-right">One of three columns</div>
+      </div>
+    </div> -->
+    <!--     
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
